@@ -23,11 +23,17 @@ div
 
 }
 .block-sleva {
-    width: 20%;
-    min-height: 100%;
+    width: 150px;/*ширина*/
+    height: 100%;/*высота*/
+    min-height: 200px;
     height-max: 100%;
     margin: 0px;
     background-color: #d9d6d6;
+}
+.block-sprava {
+    width: 150px;
+    margin: 0px;
+    background-color: #30d7d7;
 }
 .avatar
 {
@@ -36,4 +42,9 @@ div
     margin-top: 10px;
 }
 
+.obshiy {
+    width:500px;
+    height: 800px;
+    background-color: #ca2424;
+}
 
