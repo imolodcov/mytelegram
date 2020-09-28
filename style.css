@@ -1,0 +1,39 @@
+body
+{
+    width-max: 100px;
+    height: 100%;
+}
+.text {
+    color: #fffdfd;
+
+}
+div
+{
+    width: auto;
+    height: auto;
+    background-color: #65cd32;
+    margin: 0px;
+   }
+.block-shapka {
+    padding: 13px 5px;
+    width-max: 10px;
+    height: 50px;
+    background-color: #bfedff;
+    margin: 0px;
+
+}
+.block-sleva {
+    width: 20%;
+    min-height: 100%;
+    height-max: 100%;
+    margin: 0px;
+    background-color: #d9d6d6;
+}
+.avatar
+{
+    padding: 20px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+
