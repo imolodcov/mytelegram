@@ -2,47 +2,48 @@
 html {
     height:100%; /* задаем высоту элемента в процентах */
     width: 100%;
+    background-color: aliceblue;
 }
 body {
-    height:97%; /* задаем высоту элемента в процентах */
-    width: 98%;/* задаем ширину элемента в процентах */
-    max-width: 800px; /*максимальная ширина контента*/
+    height:99%; /* задаем высоту элемента в процентах */
+    width: 100%;/* задаем ширину элемента в процентах */
+    max-width: 1000px; /*максимальная ширина контента*/
     margin: 0 auto; /*отступы сверху и снизу 0 слева и справа автоматически, тем самым ставим в центре*/
 }
-.obshiy/*размер рабочего пространства */
+.obshiy /*размер рабочего пространства */
 {
     min-width:100%;
     height: 100%;
-    border:1px solid red; /*граница блока толщиной в 1 пиксели и красным цветом*/
-    /*background-color: #ca2424;*/
+  /*  border:1px solid red; /*граница блока толщиной в 1 пиксели и красным цветом*/
+    background-color: white;
+}
+header {
+    width: 100%;
+    height: 50px;
+    margin: 0px;
 }
 .text
 {
     color: #fffdfd;/*цвет текста в шапке*/
-
+    margin-left: 50px;
+    vertical-align: center;
 }
-.block-shapka {
-    padding: 13px 5px;/*внутренние отступы от текста в шапке*/
-    width: 98%;
-    height: 20px;
+.block-shapka{
+    width: 100%;
+    min-height: 100%;
     background-color: #bfedff;
-    margin: 0px;
+
 
 }
-.block-sleva /*блока с контактами*/
+.block-kontakt /*блока с контактами*/
 {
-    width: 25%;/*ширина*/
-    height: 100%;/*высота*/
+    width: 30%;/*ширина*/
+    min-height: calc(100% - 50px);/*высота*/
     margin: 0px;
-    border: 1px solid black; /*граница блока с контактами*/
-  /*  background-color: #d9d6d6;*/
+    border: 2px solid aliceblue; /*граница блока с контактами*/
+    background-color: white;
 }
-.block-sprava {
-    width: 150px;
-    margin: 0px;
-    border-color: #d7309f;
-  /*  background-color: #30d7d7;*/
-}
+
 .avatar
 {
     padding: 20px;
