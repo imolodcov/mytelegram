@@ -1,49 +1,45 @@
 
 html {
-    height:100%; /* задаем высоту элемента в процентах */
+    height: 100%; /* задаем высоту элемента в процентах */
     width: 100%;
     background-color: aliceblue;
 }
+
 body {
-    height:99%; /* задаем высоту элемента в процентах */
-    width: 100%;/* задаем ширину элемента в процентах */
+    height: 99%; /* задаем высоту элемента в процентах */
+    width: 100%; /* задаем ширину элемента в процентах */
     max-width: 1000px; /*максимальная ширина контента*/
     margin: 0 auto; /*отступы сверху и снизу 0 слева и справа автоматически, тем самым ставим в центре*/
 }
-.obshiy /*размер рабочего пространства */
-{
-    width:100%;
+
+.content { /*размер рабочего пространства */
+    width: 100%;
     height: 100%;
-  /*  border:1px solid red; /*граница блока толщиной в 1 пиксели и красным цветом*/
+    /*  border:1px solid red; /*граница блока толщиной в 1 пиксели и красным цветом*/
     background-color: white;
 }
-header {
-    width: 100%;
-    height: 50px;
-    margin: 0px;
-}
-.text
-{
-    color: #fffdfd;/*цвет текста в шапке*/
+
+.text {
+    color: #fffdfd; /*цвет текста в шапке*/
     margin-left: 50px;
     vertical-align: center;
 }
-.block-shapka{
+
+.header {
     width: 100%;
-    min-height: 100%;
+    height: 50px;
     background-color: #bfedff;
 }
-.block-kontakt /*блока с контактами*/
-{
-    width: 30%;/*ширина*/
-    height: calc(100% - 50px);/*высота*/
+
+.contacts { /*блока с контактами*/
+    width: 30%; /*ширина*/
+    height: calc(100% - 50px); /*высота*/
     margin: 0px;
     border: 2px solid aliceblue; /*граница блока с контактами*/
     background-color: white;
 }
 
-.avatar
-{
+.avatar {
     padding: 20px;
     border-radius: 50%;
     margin-top: 10px;
