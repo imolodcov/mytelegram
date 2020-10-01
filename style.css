@@ -1,19 +1,31 @@
+* {
+    font-size: 62.5%;
+}
 
 html {
     height: 100%; /* задаем высоту элемента в процентах */
     width: 100%;
     background-color: aliceblue;
+    padding: 0;
 }
 
 body {
-    height: 99%; /* задаем высоту элемента в процентах */
+    height: 100%; /* задаем высоту элемента в процентах */
     width: 100%; /* задаем ширину элемента в процентах */
-    max-width: 1000px; /*максимальная ширина контента*/
+    max-width: 100rem; /*максимальная ширина контента*/
     margin: 0 auto; /*отступы сверху и снизу 0 слева и справа автоматически, тем самым ставим в центре*/
+    border: 0.1rem solid #ffbfd1;
 }
-
+.flex-kontainer{
+    display: flex;
+}
+.main {
+    width: 5rem;
+    height: 100%;
+    background-color: blue;
+}
 .content { /*размер рабочего пространства */
-    width: 100%;
+    width: 30rem;
     height: 100%;
     /*  border:1px solid red; /*граница блока толщиной в 1 пиксели и красным цветом*/
     background-color: white;
@@ -21,28 +33,40 @@ body {
 
 .text {
     color: #fffdfd; /*цвет текста в шапке*/
-    margin-left: 50px;
+    margin-left: 5rem;
     vertical-align: center;
+    font-size: 1.4rem;
 }
 
-.header {
+header {
     width: 100%;
-    height: 50px;
+    height: 4rem;
     background-color: #bfedff;
 }
 
 .contacts { /*блока с контактами*/
     width: 30%; /*ширина*/
-    height: calc(100% - 50px); /*высота*/
-    margin: 0px;
-    border: 2px solid aliceblue; /*граница блока с контактами*/
+    height: calc(100% - 5rem); /*высота*/
+    margin: 0;
+    border: 0.2rem solid aliceblue; /*граница блока с контактами*/
     background-color: white;
+    font-size: 1.4rem; /*размер шрифта*/
+    align-self: flex-end;/*выравнивание блока по нижнему краю*/
+}
+.messages {
+    width: calc(70% - 5rem); /*ширина*/
+    height: calc(100% - 5rem);
+    border: 0.2rem solid #fff0f5; /*граница блокаcсообщений*/
+    background-color: white;
+    align-self: flex-end; /*выравнивание блока по нижнему краю*/
 }
 
 .avatar {
-    padding: 20px;
+    padding: 2rem;
     border-radius: 50%;
-    margin-top: 10px;
+    margin-top: 1rem;
+    width: 5rem;
+    align: middle;
 }
 
 
