@@ -6,7 +6,6 @@ html {
     height: 100%; /* задаем высоту элемента в процентах */
     width: 100%;
     background-color: aliceblue;
-    padding: 0;
 }
 
 body {
@@ -14,12 +13,11 @@ body {
     width: 100%; /* задаем ширину элемента в процентах */
     max-width: 100rem; /*максимальная ширина контента*/
     margin: 0 auto; /*отступы сверху и снизу 0 слева и справа автоматически, тем самым ставим в центре*/
-    border: 0.1rem solid #0e0d0d;
 }
 
-.flex-kontainer {
-    display: flex;
-    flex-flow: column wrap;
+.flex-kontainer { /*задаем расположение блоков*/
+    display: flex; /*распологаем блоки в линию*/
+    flex-flow: column wrap; /*распологаем столбиками*/
 }
 
 .main {
@@ -28,50 +26,43 @@ body {
     background-color: blue;
 }
 
-.content { /*размер рабочего пространства */
-    width: 30rem;
-    height: 100%;
-    /*  border:1px solid red; /*граница блока толщиной в 1 пиксели и красным цветом*/
-    background-color: white;
-}
-
 .text {
     color: #fffdfd; /*цвет текста в шапке*/
     margin-left: 5rem;
-    vertical-align: center;
-    font-size: 1.4rem;
+    margin-top: 1rem;
+    font-size: 1.8rem;
 }
 
-header {
-    width: calc(100% - 5rem);
+.headerkontart {
+    width: 30%;
     height: 4rem;
     background-color: #bfedff;
 }
 
-.contacts { /*блока с контактами*/
-    width: 30%; /*ширина*/
-    height: calc(100% - 5rem); /*высота*/
-    /*margin: 0;*/
-    border: 0.2rem solid aliceblue; /*граница блока с контактами*/
-    background-color: white;
-    font-size: 1.4rem; /*размер шрифта*/
-  /*  align-self: flex-end; /*выравнивание блока по нижнему краю*/
+.headerchat {
+    width: calc(70% - 5rem);
+    height: 4rem;
+    background-color: #bfedff;
 }
 
-.messages {
-    width: calc(70% - 5rem); /*ширина*/
-    height: calc(100% - 5rem);
-    border: 0.2rem solid #fff0f5; /*граница блока сообщений*/
+.contacts {
+    width: 30%; /*ширина*/
+    height: calc(100% - 4rem); /*высота*/
     background-color: white;
-   /* align-self: flex-end; /*выравнивание блока по нижнему краю*/
+    font-size: 1.8rem; /*размер шрифта*/
+}
+
+.chat {
+    width: calc(70% - 5rem); /*ширина*/
+    height: calc(100% - 4rem);
+    border-left: 0.2rem solid aliceblue; /*левая граница блока сообщений будет видна как гарница между контактами и чатами*/
+    background-color: white;
+    box-sizing: border-box; /*границу включаем в размер блока чтобы не появлялась полоса прокрутки конткнта внизу*/
 }
 
 .avatar {
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 50%;
-    margin-top: 1rem;
     width: 5rem;
-    align: middle;
 }
-
 
