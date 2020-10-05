@@ -1,11 +1,12 @@
 * {
-    font-size: 62.5%;
+    box-sizing: border-box; /*границу включаем в размер блока чтобы не появлялась полоса прокрутки*/
 }
 
 html {
     height: 100%; /* задаем высоту элемента в процентах */
     width: 100%;
     background-color: aliceblue;
+    font-size: 62.5%;
 }
 
 body {
@@ -13,9 +14,6 @@ body {
     width: 100%; /* задаем ширину элемента в процентах */
     max-width: 100rem; /*максимальная ширина контента*/
     margin: 0 auto; /*отступы сверху и снизу 0 слева и справа автоматически, тем самым ставим в центре*/
-}
-
-.flex-kontainer { /*задаем расположение блоков*/
     display: flex; /*распологаем блоки в линию*/
     flex-flow: column wrap; /*распологаем столбиками*/
 }
@@ -30,16 +28,16 @@ body {
     color: #fffdfd; /*цвет текста в шапке*/
     margin-left: 5rem;
     margin-top: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
-.headerkontart {
+.header-contact {
     width: 30%;
     height: 4rem;
     background-color: #bfedff;
 }
 
-.headerchat {
+.header-chat {
     width: calc(70% - 5rem);
     height: 4rem;
     background-color: #bfedff;
@@ -49,7 +47,7 @@ body {
     width: 30%; /*ширина*/
     height: calc(100% - 4rem); /*высота*/
     background-color: white;
-    font-size: 1.8rem; /*размер шрифта*/
+    font-size: 1.4rem; /*размер шрифта*/
 }
 
 .chat {
@@ -57,7 +55,7 @@ body {
     height: calc(100% - 4rem);
     border-left: 0.2rem solid aliceblue; /*левая граница блока сообщений будет видна как гарница между контактами и чатами*/
     background-color: white;
-    box-sizing: border-box; /*границу включаем в размер блока чтобы не появлялась полоса прокрутки конткнта внизу*/
+
 }
 
 .avatar {
