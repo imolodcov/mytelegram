@@ -24,11 +24,11 @@ body {
     background-color: #22225d;
 }
 
-.text {
+.text-header {
     color: #fffdfd; /*цвет текста в шапке*/
     margin-left: 5rem;
     margin-top: 1rem;
-    font-size: 1.4rem;
+    font-size: 1.4rem; /*размер шрифта*/
 }
 
 .header-contact {
@@ -43,17 +43,24 @@ body {
     background-color: #bfedff;
 }
 
-.contacts {
+.contacts { /*параметры блока контактов*/
     width: 33%; /*ширина*/
     height: calc(100% - 4rem); /*высота*/
     background-color: white;
     font-size: 1.4rem; /*размер шрифта*/
-    border-right: 0.1rem solid aliceblue;/*правая граница блока сообщений будет видна как гарница между контактами и чатами*/
+    border-right: 0.1rem solid aliceblue; /*правая граница блока сообщений будет видна как гарница между контактами и чатами*/
+    overflow: auto;
 }
 
-.contact {
+.contact { /*параметры отдельных контактов*/
     display: flex; /*распологаем блоки в линию*/
     height: 6rem;
+    align-items: center; /*выравнивание по центру*/
+}
+
+.active-contact { /*параметры активного контакта*/
+    background-color: #5396e3;
+    color: #fffdfd; /*цвет текста в шапке*/
 }
 
 .avatar {
@@ -62,28 +69,27 @@ body {
     width: 6rem;
 }
 
-.active-chat {
-    background-color: #5396e3;
-    color: #fffdfd; /*цвет текста в шапке*/
-}
-
 .status {
     width: calc(67% - 7rem); /*ширина*/
     height: 5.2rem;
     background-color: #fffdfd;
+    padding: 0.7rem;
+    padding-left: 2rem;
 }
 
 .name {
     font-weight: 500;
     font-size: large;
-    padding-top: 1rem;
 }
 
 .text-message {
     width: calc(67% - 7rem); /*ширина*/
     height: 5.2rem;
     background-color: #fffdfd;
-
+    color: #c6c6c6;
+    display: flex; /*расположение элементов в линию*/
+    align-items: center; /*выравнивание по центру*/
+    font-size: 1.5rem;
 }
 
 .chat {
@@ -91,29 +97,27 @@ body {
     height: calc(100% - 4rem - 5.2rem - 5.2rem);
     background-image: url("pictures/romashki.jpg");
     display: flex;
-    flex-direction: column-reverse;
-
+    flex-direction: column-reverse; /*обратное расположение колонок*/
+    padding: 1rem;
+    overflow: auto;/*запрещает выходить контенту за размер блока, при необходимости появляется полоса прокрутки*/
 }
 
-.incoming-message {
-    width-max: 80%;
+.incoming-message { /*входящие сообщения*/
+    width-max: 70%;
+    padding: 1rem; /*внутренние границы*/
     margin-left: 1rem;
     margin-right: auto;
-    padding: 0.5rem;
+    margin-top: 1rem;
     background-color: white;
     border-radius: 0.5rem;
-
-   /* position: relative ;*/
-
 }
 
-.outgoing-message {
-   /* width: auto;*/
+.outgoing-message { /*исходящие сообщения*/
     max-width: 70%;
     margin-left: auto;
     margin-right: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
     background-color: #d3f8c2;
     border-radius: 0.5rem;
 }
