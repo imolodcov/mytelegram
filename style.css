@@ -6,7 +6,7 @@ html {
     height: 100%; /* задаем высоту элемента в процентах */
     width: 100%;
     background-color: aliceblue;
-    font-size: 62.5%;/*для указывания размера текста в rem в соотношении 1/10 px*/
+    font-size: 62.5%; /*для указывания размера текста в rem в соотношении 1/10 px*/
 }
 
 body {
@@ -27,7 +27,7 @@ body {
 
 .folder {
     width: 7rem;
-    text-align: center;/* расположение по центру*/
+    text-align: center; /* расположение по центру*/
 
 }
 
@@ -45,7 +45,7 @@ body {
     height: 3rem;
     background-color: #efefef;
     border-radius: 0.3rem;
-    margin: 1rem auto;/*располагает строку поиска с */
+    margin: 1rem auto; /*располагает строку поиска с отступомсверху и по центру горизонтально*/
     padding-top: 0.7rem;
     padding-left: 2rem;
 }
@@ -78,7 +78,7 @@ body {
 }
 
 .name {
-    width: calc(100% - 9rem);
+    width: calc(100% - 12rem);
     font-weight: 500;
     font-size: large;
 }
@@ -114,6 +114,15 @@ body {
     flex-direction: column-reverse; /*обратное расположение колонок*/
     padding: 1rem;
     overflow: auto; /*запрещает выходить контенту за размер блока, при необходимости появляется полоса прокрутки*/
+}
+
+.date {
+    margin: 1rem auto;
+    padding: 0.2rem;
+    background-color: #8eb879;
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+    color: #fffdfd;
 }
 
 .incoming-message { /*входящие сообщения*/
