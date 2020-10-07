@@ -31,6 +31,7 @@ body {
     font-size: 1.4rem; /*размер шрифта*/
 }
 
+/*
 .header-contact {
     width: 33%;
     height: 4rem;
@@ -41,15 +42,27 @@ body {
     width: calc(67% - 7rem);
     height: 4rem;
     background-color: #bfedff;
-}
+}*/
 
 .contacts { /*параметры блока контактов*/
     width: 33%; /*ширина*/
-    height: calc(100% - 4rem); /*высота*/
+    height: 100%; /*высота*/
     background-color: white;
     font-size: 1.4rem; /*размер шрифта*/
     border-right: 0.1rem solid aliceblue; /*правая граница блока сообщений будет видна как гарница между контактами и чатами*/
     overflow: auto;
+}
+
+.Search {
+    width: 85%;
+    height: 3rem;
+    background-color: #efefef;
+    border-radius: 0.3rem;
+    margin: 1rem auto;
+    color: #c6c6c6;
+    padding: 0.7rem;
+    padding-left: 2rem;
+   /* margin-right: auto;*/
 }
 
 .contact { /*параметры отдельных контактов*/
@@ -94,12 +107,12 @@ body {
 
 .chat {
     width: calc(67% - 7rem); /*ширина*/
-    height: calc(100% - 4rem - 5.2rem - 5.2rem);
+    height: calc(100% - 5.2rem - 5.2rem);
     background-image: url("pictures/romashki.jpg");
     display: flex;
     flex-direction: column-reverse; /*обратное расположение колонок*/
     padding: 1rem;
-    overflow: auto;/*запрещает выходить контенту за размер блока, при необходимости появляется полоса прокрутки*/
+    overflow: auto; /*запрещает выходить контенту за размер блока, при необходимости появляется полоса прокрутки*/
 }
 
 .incoming-message { /*входящие сообщения*/
