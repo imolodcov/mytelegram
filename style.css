@@ -29,6 +29,10 @@ body {
     text-align: center; /* расположение по центру*/
 }
 
+.folders__folder_active {
+    background-color: #181515;
+}
+
 .folders__text {
     color: #c6c6c6;
     font-size: 1.5rem;
@@ -53,16 +57,15 @@ body {
     width: 85%;
     height: 3rem;
     background-color: #efefef;
-    margin: 1rem auto; /*располагает строку поиска с отступомсверху и по центру горизонтально*/
-    padding-top: 0.7rem;
-    padding-left: 2rem;
+    margin: 1rem 7.5%; /*располагает строку поиска с отступомсверху и по центру горизонтально*/
     font-size: 1.5rem;
     border: #c6c6c6;
+    outline: #00d9ff;
+    border-radius: 0.3rem;
 }
 
-input:focus{
-  /*  border: 0.1rem solid blue;*/
-    box-shadow: 1px 1px 2px 0 blue;
+.contacts__search:focus {
+    border: 0.2rem solid #00d9ff;
 }
 
 .contacts__contact { /*параметры отдельных контактов*/
@@ -74,8 +77,12 @@ input:focus{
 }
 
 .contacts__contact_active { /*параметры активного контакта*/
-    background-color: #5396e3;
-    color: #fffdfd; /*цвет текста в шапке*/
+    background-color: #5396e3 !important;/*определяем фон активного элеменка как самы приоритетный*/
+    color: #fffdfd; /*цвет текста активного контакта*/
+}
+
+.contacts__contact:hover {
+    background-color: #efefef;
 }
 
 .contacts__avatar {
@@ -115,13 +122,16 @@ input:focus{
     font-size: 1.5rem;
     color: #c6c6c6;
 
+
 }
 
 .message__text {
     width: calc(100% - 11.6rem);
-    height: 5.2rem;
-    background-color: #fffdfd;
-    padding: 1.5rem;
+    height: 100%;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
 }
 
 .message__ico {
@@ -138,36 +148,47 @@ input:focus{
     flex-direction: column-reverse; /*обратное расположение колонок*/
     padding: 1rem;
     overflow: auto; /*запрещает выходить контенту за размер блока, при необходимости появляется полоса прокрутки*/
+    font-size: 1.3rem;
 }
 
 .chat__date {
+    width: auto;
+    height: auto;
     margin: 1rem auto;
     padding: 0.2rem;
     background-color: #8eb879;
     border-radius: 0.5rem;
-    font-size: 1.3rem;
     color: #fffdfd;
+    background-image: none;
 }
 
 .chat__incoming { /*входящие сообщения*/
+    width: auto;
+    height: auto;
     width-max: 70%;
-    padding: 1rem; /*внутренние границы*/
-    margin-left: 1rem;
     margin-right: auto;
     margin-top: 1rem;
     background-color: white;
     border-radius: 0.5rem;
-    font-size: 1.3rem;
+    background-image: none;
 }
 
 .chat__outgoing { /*исходящие сообщения*/
+    width: auto;
+    height: auto;
     max-width: 70%;
     margin-left: auto;
-    margin-right: 1rem;
     margin-top: 1rem;
-    padding: 1rem;
     background-color: #d3f8c2;
     border-radius: 0.5rem;
-    font-size: 1.3rem;
+    background-image: none;
 }
 
+.chat__time {
+    font-size: 1rem;
+    margin: 0 0 0 auto
+}
+
+.chat__verification {
+
+}
