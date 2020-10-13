@@ -77,7 +77,7 @@ body {
 }
 
 .contacts__contact_active { /*параметры активного контакта*/
-    background-color: #5396e3 !important;/*определяем фон активного элеменка как самы приоритетный*/
+    background-color: #5396e3 !important; /*определяем фон активного элеменка как самы приоритетный*/
     color: #fffdfd; /*цвет текста активного контакта*/
 }
 
@@ -121,8 +121,6 @@ body {
     align-items: center; /*выравнивание по центру*/
     font-size: 1.5rem;
     color: #c6c6c6;
-
-
 }
 
 .message__text {
@@ -186,9 +184,7 @@ body {
 
 .chat__time {
     font-size: 1rem;
-    margin: 0 0 0 auto
+    margin: 0 0 0 auto;
 }
 
-.chat__verification {
 
-}
