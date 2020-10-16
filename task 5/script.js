@@ -27,7 +27,7 @@ let cells = function (input) {//функция создает таблицу и 
     table.appendChild(line);//добавляем  строку в таблицу
 }
 let oddNumer = function (someNumber) {//проверяем значения вводимые в ячейку на четностьна четность
-    return (someNumber % 2 == 0) ? true : false;
+    return (someNumber % 2 === 0);
 }
 button.onclick = function () {//функция отслеживает нажати кнопки
     table.innerHTML = '';//очищает таблицу
