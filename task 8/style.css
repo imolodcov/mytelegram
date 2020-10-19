@@ -14,43 +14,24 @@ body {
     width: 100%; /* задаем ширину элемента в процентах */
     margin: 0 auto; /*отступы сверху и снизу 0 слева и справа автоматически, тем самым ставим в центре*/
     display: flex; /*распологаем блоки в линию*/
-  /*  flex-flow: column wrap; /*распологаем столбиками*/
+    flex-flow: column wrap; /*распологаем столбиками*/
 }
-.add{
-    margin: 2rem;
 
-}
-.add__input {
+.input {
     width: 10rem;
     height: auto;
     margin-right: 2rem;
 }
 
 
-.add__button {
-    width: 8rem;
-}
-
-.find {
-    margin: 2rem;
-}
-
-.find__input {
-    width: 10rem;
-    height: auto;
-    margin-right: 2rem;
-}
-
-
-.find__button {
+.button {
     width: 8rem;
 }
 
 .table {
-    min-width: 25rem;
+    width: 3rem;
     height: auto;
     margin: 1rem 0;
-
 }
 
 .td {
@@ -59,6 +40,11 @@ body {
     font-size: 2rem;
     margin: 0;
     border: 1px solid black;
+    color: blue;
+}
+
+.inversion {
+
 }
 
 .data {
