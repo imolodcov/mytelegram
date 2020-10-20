@@ -1,6 +1,7 @@
 let button = document.querySelector('.button');
 let table = document.querySelector('table');//создаем переменную которая находит таблицу
 let inversion = document.querySelector('.inversion');
+
 let creatArray = function (ValueFromInput) {//создаем массив чисел
     array = [];
     for (let i = 1; i <= ValueFromInput; i++) {
@@ -15,6 +16,7 @@ let creatArray = function (ValueFromInput) {//создаем массив чис
         array[i - 1] = array2;
     }
 }
+
 let showArray = function (input) {//создаем таблиццу и заполняем ее из массива
     for (let i = 1; i <= input; i++) {
         let line = document.createElement("tr");//создаем строку
@@ -36,7 +38,7 @@ button.onclick = function () {//функция отслеживает нажат
     table.innerHTML = '';//очищает таблицу
     let input = document.querySelector('.input').value;//присваивает значение в поле ввода переменной input
     creatArray(input);//создаем массив чисел
-    showArray(input);//создаем массив чисел
+    showArray(input);//создаем таблицу
     document.querySelector('.input').value = '';//очищает поле ввода
 }
 

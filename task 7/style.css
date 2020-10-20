@@ -23,7 +23,6 @@ body {
     margin-right: 2rem;
 }
 
-
 .button {
     width: 8rem;
 }
@@ -40,11 +39,6 @@ body {
     font-size: 2rem;
     margin: 0;
     border: 1px solid black;
-    color: blue;
-}
-
-.inversion {
-
 }
 
 .data {
@@ -57,7 +51,6 @@ body {
     height: auto;
     margin-right: 2rem;
 }
-
 
 .button {
     width: 8rem;
