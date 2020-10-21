@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box; /*границу включаем в размер блока чтобы не появлялась полоса прокрутки*/
+}
+
+html {
+    height: 100%; /* задаем высоту элемента в процентах */
+    width: 100%;
+    background-color: aliceblue;
+    font-size: 62.5%; /*для указывания размера текста в rem в соотношении 1/10 px*/
+}
+
+body {
+    height: 100%; /* задаем высоту элемента в процентах */
+    width: 100%; /* задаем ширину элемента в процентах */
+    margin: 0 auto; /*отступы сверху и снизу 0 слева и справа автоматически, тем самым ставим в центре*/
+    display: flex; /*распологаем блоки в линию*/
+    flex-flow: column wrap; /*распологаем столбиками*/
+}
+
+.input {
+    width: 10rem;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.button {
+    width: 8rem;
+}
+
+.table {
+    width: 3rem;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.td {
+    width: auto;
+    height: auto;
+    font-size: 2rem;
+    margin: 0;
+    border: 1px solid black;
+}
+
+.data {
+    display: flex;
+    font-size: 1.5rem;
+    padding: 3rem;
+}
+.input {
+    width: 10rem;
+    height: auto;
+    margin-right: 2rem;
+}
+
+.button {
+    width: 8rem;
+}
