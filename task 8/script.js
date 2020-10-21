@@ -1,29 +1,28 @@
-let add__button = document.querySelector('.add__button');
-let add__input = document.querySelector('.add__input');
-let find__button = document.querySelector('.find__button');
-let find__input = document.querySelector('.find__input');
-let table = document.querySelector('.table');//создаем переменную которая находит таблицу
-let list = [];
+const addButton = document.querySelector('.add__button');
+const addInput = document.querySelector('.add__input');
+const findButton = document.querySelector('.find__button');
+const findInput = document.querySelector('.find__input');
+const table = document.querySelector('.table');//создаем переменную которая находит таблицу
+const list = [];
 
-let dell = function (id) {
+const dell = function (id) {
     table.innerHTML = '';//очищает таблицу
-    list.forEach(function (value, index, array) {//перебор массива
-        if (index === id) {
-            list.splice(index, 1)//удаляем элемент массива
-        }
+    const array = list.filter(function (value, index, array) {
+        return index !== id;
     })
-    create_table();//перерисовываем таблицу
+    console.log(array);
+    return (array);
 }
 
-let create_table = function () {//создаем таблиццу и заполняем ее из массива
-    let header = document.createElement("th");
+const createTable = function (list) {//создаем таблиццу и заполняем ее из массива
+    const header = document.createElement("th");
     header.innerText = 'Список';
     header.className = "table";
     table.appendChild(header);
     list.forEach(function (value, index, array) {
-        let line = document.createElement("tr");//создаем строку
-        let cell = document.createElement("td");//создаем ячейку
-        let button = document.createElement("button");//создам кнопку
+        const line = document.createElement("tr");//создаем строку
+        const cell = document.createElement("td");//создаем ячейку
+        const button = document.createElement("button");//создам кнопку
         button.className = "del";//присваивае стиль кнопке
         button.id = index;//присваиваем индекс кнопке
         button.innerHTML = '&#10008'; //записываем в кнопку крестик
@@ -33,7 +32,8 @@ let create_table = function () {//создаем таблиццу и запол�
         line.appendChild(button);//добавляем в строку кнопку
         table.appendChild(line);//добавляем  строку в таблицу
         document.getElementById(index).addEventListener('click', function () {           //отслеживаем нажатие каждой новой кнопки
-            dell(index);//вызов функции удаления
+            dell(index);
+            const list = dell(index);
         })
 
     })
@@ -41,16 +41,16 @@ let create_table = function () {//создаем таблиццу и запол�
 
 }
 
-let compare_table = function () {//создаем таблиццу и заполняем ее из массива
-    let header = document.createElement("th");
+const compareTable = function () {//создаем таблиццу и заполняем ее из массива
+    const header = document.createElement("th");
     header.innerText = 'Список';
     header.className = "table";
     table.appendChild(header);
-    let comparate = find__input.value
+    const comparate = find__input.value
     list.forEach(function (value, index, array) {
-        let line = document.createElement("tr");//создаем строку
-        let cell = document.createElement("td");//создаем ячейку
-        let button = document.createElement("button");
+        const line = document.createElement("tr");//создаем строку
+        const cell = document.createElement("td");//создаем ячейку
+        const button = document.createElement("button");
         button.className = "del";
         button.id = index;
         button.innerHTML = '&#10008';
@@ -75,27 +75,26 @@ let compare_table = function () {//создаем таблиццу и запол
 
 }
 
-find__button.onclick = function () {//функция отслеживает нажати кнопки
-    if (find__input.value === "") {
+findButton.onclick = function () {//функция отслеживает нажати кнопки
+    if (findInput.value === "") {
         return
     } else {
         table.innerHTML = '';//очищает таблицу
-        compare_table();
-        find__input.value = '';//очищает поле ввода
+        compareTable();
+        findInput.value = '';//очищает поле ввода
 
 
     }
 }
 
-add__button.onclick = function () {//функция отслеживает нажати кнопки
-    if (add__input.value === "") {
+addButton.onclick = function () {//функция отслеживает нажати кнопки
+    if (addInput.value === "") {
         return
     } else {
         table.innerHTML = '';//очищает таблицу
-        list.push(add__input.value);
-        add__input.value = '';//очищает поле ввода
-        create_table();
-        // console.log(list);
+        list.push(addInput.value);
+        addInput.value = '';//очищает поле ввода
+        createTable(list);
     }
 }
 

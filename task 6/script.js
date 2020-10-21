@@ -1,6 +1,5 @@
 const button = document.querySelector('.button');
 const table = document.querySelector('table');
-
 const oddNumer = function (someNumber) {
     return (someNumber % 2 === 0);
 }
@@ -16,7 +15,7 @@ const createArray = function (ValueFromInput) {
             arr[i - 1] = 2 * ValueFromInput - i;
         }
     }
-    return (arr)
+    return (arr);
 }
 /*
 *Создаем таблицу
