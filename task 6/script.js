@@ -3,9 +3,7 @@ const table = document.querySelector('table');
 const oddNumer = function (someNumber) {
     return (someNumber % 2 === 0);
 }
-/*
-*Создаем массив
- */
+
 const createArray = function (ValueFromInput) {
     arr = [];
     for (let i = 1; i < 2 * ValueFromInput; i++) {
@@ -17,22 +15,20 @@ const createArray = function (ValueFromInput) {
     }
     return (arr);
 }
-/*
-*Создаем таблицу
- */
+
 const showArray = function (array) {
     const line = document.createElement("tr");
     array.forEach(function (value, index, array) {
         const cell = document.createElement("td");
         cell.innerText = value;
-        if (oddNumer(value)) {//присваиваем ячейкам класс в зависимости от четности числа записывемого в него
+        if (oddNumer(value)) {
             cell.className = "td td_even";
         } else {
             cell.className = "td";
         }
-        line.appendChild(cell);//добавляем в строку ячейк
+        line.appendChild(cell);
     })
-    table.appendChild(line);//добавляем  строку в таблицу
+    table.appendChild(line);
 }
 
 button.onclick = function () {
