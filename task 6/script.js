@@ -1,40 +1,40 @@
-let button = document.querySelector('.button');
-let table = document.querySelector('table');//создаем переменную которая находит таблицу
-
-let oddNumer = function (someNumber) {//проверяем значения вводимые в ячейку на четностьна четность
+const button = document.querySelector('.button');
+const table = document.querySelector('table');
+const oddNumer = function (someNumber) {
     return (someNumber % 2 === 0);
 }
 
-let creatArray = function (ValueFromInput) {//создаем массив чисел
-    array = [ValueFromInput];
-    for (let i = 1; i < 2 * ValueFromInput; i++) { //Ячейки таблицы
+const createArray = function (ValueFromInput) {
+    arr = [];
+    for (let i = 1; i < 2 * ValueFromInput; i++) {
         if (i <= ValueFromInput) {
-            array[i - 1] = i;//добавляем в строку ячейку
+            arr[i - 1] = i;
         } else {
-            array[i - 1] = 2 * ValueFromInput - i;
+            arr[i - 1] = 2 * ValueFromInput - i;
         }
     }
+    return (arr);
 }
 
-let showArray = function () {
-    let line = document.createElement("tr");
+const showArray = function (array) {
+    const line = document.createElement("tr");
     array.forEach(function (value, index, array) {
-        let cell = document.createElement("td");
+        const cell = document.createElement("td");
         cell.innerText = value;
-        if (oddNumer(value)) {//присваиваем ячейкам класс в зависимости от четности числа записывемого в него
+        if (oddNumer(value)) {
             cell.className = "td td_even";
         } else {
             cell.className = "td";
         }
-        line.appendChild(cell);//добавляем в строку ячейк
+        line.appendChild(cell);
     })
-    table.appendChild(line);//добавляем  строку в таблицу
+    table.appendChild(line);
 }
 
-button.onclick = function () {//функция отслеживает нажати кнопки
-    table.innerHTML = '';//очищает таблицу
-    let input = document.querySelector('.input').value;//присваивает значение в поле ввода переменной input
-    creatArray(input);//создаем массив чисел
-    showArray(input);//создаем массив чисел
-    document.querySelector('.input').value = '';//очищает поле ввода
+button.onclick = function () {
+    table.innerHTML = '';
+    const ValueFromInput = document.querySelector('.input').value;
+    const array = createArray(ValueFromInput);
+    showArray(array);
+    document.querySelector('.input').value = '';
 }
