@@ -3,24 +3,23 @@
 }
 
 html {
-    height: 100%; /* задаем высоту элемента в процентах */
+    height: 100%;
     width: 100%;
     background-color: aliceblue;
     font-size: 62.5%; /*для указывания размера текста в rem в соотношении 1/10 px*/
 }
 
 body {
-    height: 100%; /* задаем высоту элемента в процентах */
-    width: 100%; /* задаем ширину элемента в процентах */
-    margin: 0 auto; /*отступы сверху и снизу 0 слева и справа автоматически, тем самым ставим в центре*/
-    display: flex; /*распологаем блоки в линию*/
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .time {
     height: 5rem;
     width: 20rem;
     margin: 2rem;
-    padding: 1.5rem ;
+    padding: 1.5rem;
     border: #181515 solid 0.1rem;
     font-size: medium;
 }
